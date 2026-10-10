@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickNotes is a simple note-taking app to organize your personal, work, and study notes.">
+
+
+<title>QuickNotes | Your Personal Note-Taking App</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+
+</head>
+<body>
+
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <h1>QuickNotes</h1>
+        <p>Your thoughts, organized in one place.</p>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main>
+
+    <!-- Add a Note Section -->
+    <section id="add-note-section">
+        <h2>Add a Note</h2>
+        <p class="section-description">Capture your thoughts, tasks, and ideas.</p>
+
+        <form id="note-form">
+            <div class="form-group">
+                <label for="note-input">Note text</label>
+                <input
+                    type="text"
+                    id="note-input"
+                    name="note"
+                    placeholder="What would you like to remember?"
+                    maxlength="200"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="note-category">Choose a category</label>
+                <select id="note-category" name="category">
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</option>
+                </select>
+            </div>
+
+            <button type="submit">Add Note</button>
+        </form>
+
+        <!-- Validation Error Message -->
+        <p id="error-message" role="alert" aria-live="polite"></p>
+    </section>
+
+    <!-- Your Notes Section -->
+    <section id="your-notes-section">
+        <h2>Your Notes</h2>
+        <p class="section-description">View and manage all your saved notes.</p>
+
+        <!-- Search Notes -->
+        <div class="search-container">
+            <label for="search-input">Search your notes</label>
+            <input
+                type="search"
+                id="search-input"
+                name="search"
+                placeholder="Search by note text..."
+                autocomplete="off"
+            >
+        </div>
+
+        <!-- Note Count -->
+        <p id="note-count" aria-live="polite">You have no notes yet.</p>
+
+        <!-- Clear All Button (Bonus Feature) -->
+        <button type="button" id="clear-all-button" class="clear-all-button">
+            Clear All
+        </button>
+
+        <!-- Notes will be added here by JavaScript -->
+        <ul id="notes-list" aria-label="Your saved notes"></ul>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 QuickNotes. Keep your thoughts organized.</p>
+</footer>
+```
+
+</body>
+</html>
